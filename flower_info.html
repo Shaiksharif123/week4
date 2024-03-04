@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/premium-photo/tranquil-mountain-lake-with-wooden-dock-surrounded-by-beauty-nature-serene-peaceful-atmosphere-ultimate-relaxation-generative-ai_213438-9348.jpg?size=626&ext=jpg&ga=GA1.1.1395880969.1709424000&semt=ais'); /* Replace 'background_image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flower-info {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border: 10px solid white;
+            border-radius: 5px;
+        }
+        .flower-img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            float: left;
+        }
+        .flower-details {
+            margin-left: 120px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flower-info">
+        <img class="flower-img" src="" alt="Flower">
+        <div class="flower-details">
+            <h2><h2 style="color: rgb(236, 28, 0);">Flower Information</h2>
+            <p><strong>Name:</strong> <span id="flower-name"></span></p>
+            <p><strong>Cost:</strong> <span id="flower-cost"></span></p>
+            <p><strong>Color:</strong> <span id="flower-color"></span></p>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            var params = new URLSearchParams(window.location.search);// accessing the query parameters from the current URL.//
+            var name = params.get('name');
+            var cost = params.get('cost');
+            var color = params.get('color');
+
+            document.getElementById('flower-name').innerText = name;
+            document.getElementById('flower-cost').innerText = cost;
+            document.getElementById('flower-color').innerText = color;
+            document.querySelector('.flower-img').src = getImageSrc(name);
+        };
+
+        function getImageSrc(name) {//which returns the URL of the flower image based on the flower name.//
+            switch (name) {
+                case 'Rose':
+                    return 'https://imgs.search.brave.com/04aRcpxEm8ON4K_5a_AzR4dTyPu5Bm8cHtJTMB7jQ8g/rs:fit:500:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi8zLzNhL1Jv/c2FfUHJlY2lvdXNf/cGxhdGludW0uanBn/LzUxMnB4LVJvc2Ff/UHJlY2lvdXNfcGxh/dGludW0uanBn';
+                case 'Lotus':
+                    return 'https://imgs.search.brave.com/DcnaMPR0razZ7TpsdmhbwCeAn4kAVXpRW8ZqnYoNQco/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NjExODY4NjUtMzgw/YWI2NTVjYjFkP3E9/ODAmdz0xMDAwJmF1/dG89Zm9ybWF0JmZp/dD1jcm9wJml4bGli/PXJiLTQuMC4zJml4/aWQ9TTN3eE1qQTNm/REI4TUh4elpXRnlZ/Mmg4TVRGOGZHeHZk/SFZ6SlRJd1pteHZk/MlZ5ZkdWdWZEQjhm/REI4Zkh3dw';
+                case 'Lilly':
+                    return 'https://imgs.search.brave.com/aO4p1h7gLg4qxEK5fzKtbCjdcNgFq7u11GoQPKxsyWs/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2U5LzBl/LzlkL2U5MGU5ZGMw/NjQ0NWQ4NTAxYTFm/M2MwNzlhNDJkZGZk/LmpwZw';
+                default:
+                    return '';
+            }
+        }
+    </script>
+</body>
+</html>

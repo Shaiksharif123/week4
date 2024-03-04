@@ -1,0 +1,64 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Display</title>
+    <link rel="stylesheet" href="flower.css">
+    <style>
+        body {
+            background-image: url('https://st.depositphotos.com/1813545/2432/i/450/depositphotos_24324963-stock-photo-summer-sea-design-template-beautiful.jpg'); /* Replace 'background_image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .flowers {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .flowers a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: rgb(244, 10, 37);
+        }
+        .flowers a:hover {
+            color: rgb(194, 59, 59);
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .flower {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><h2 style="color: rgb(230, 10, 10);">Amazing Flower Shop</h1>
+        <h1><h2 style="color: rgb(230, 10, 10);">Flower Image</h1>
+        <div class="flowers">
+            <a href="flower_info.html?name=Rose&cost=$15&color=Red" target="_blank">
+                <img class="flower" src="https://imgs.search.brave.com/04aRcpxEm8ON4K_5a_AzR4dTyPu5Bm8cHtJTMB7jQ8g/rs:fit:500:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi8zLzNhL1Jv/c2FfUHJlY2lvdXNf/cGxhdGludW0uanBn/LzUxMnB4LVJvc2Ff/UHJlY2lvdXNfcGxh/dGludW0uanBn" alt="Rose flower">
+            </a>
+            <a href="flower_info.html?name=Lotus&cost=$13&color=pink" target="_blank" >
+                <img class="flower" src="https://imgs.search.brave.com/DcnaMPR0razZ7TpsdmhbwCeAn4kAVXpRW8ZqnYoNQco/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NjExODY4NjUtMzgw/YWI2NTVjYjFkP3E9/ODAmdz0xMDAwJmF1/dG89Zm9ybWF0JmZp/dD1jcm9wJml4bGli/PXJiLTQuMC4zJml4/aWQ9TTN3eE1qQTNm/REI4TUh4elpXRnlZ/Mmg4TVRGOGZHeHZk/SFZ6SlRJd1pteHZk/MlZ5ZkdWdWZEQjhm/REI4Zkh3dw" alt="Lotus">
+            </a>
+            <a href="flower_info.html?name=Lilly&cost=$12&color=white" target="_blank">
+                <img class="flower" src="https://imgs.search.brave.com/aO4p1h7gLg4qxEK5fzKtbCjdcNgFq7u11GoQPKxsyWs/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2U5LzBl/LzlkL2U5MGU5ZGMw/NjQ0NWQ4NTAxYTFm/M2MwNzlhNDJkZGZk/LmpwZw" alt="Lilly">
+            </a>
+        </div>
+    </div>
+   
+</body>
+</html>
