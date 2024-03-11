@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+</head>
+<script>
+    function validate()
+    {
+   
+        let pwd1=frm.pwd.value;
+        let pwd2=pwd1.length;
+        if(pwd2%2==1)
+        {
+            alert("Password should contain even numbers");
+            return false;
+        }
+        if(pwdlen>8)
+        {
+            alert("Password shouldnot exceed 8 letters");
+            return false;
+        }
+    }
+    
+
+</script>
+<body>
+    <center>
+        <form name=" frm" method=" POST"action="" onSubmit="return validate()">
+            <fieldset align-center>
+                <table align-center>
+                    <tr><td> E-Mail id:</td><td> <input type="email" name="mail" value="" size="50" requried/> </td></tr>
+                    <tr> <td> User name :</td><td> <input type="text" name="user name" size="50" requried /> </td></tr>
+                    <tr> <td> Password:</td><td> <input type="password" name="pwd" size= "50" requried /> </td></tr
+                </table>
+                <input type="submit" value="login" name="Submit"/>
+                </fieldset>
+        </form>
+    </center>
+
+
+</body>
+</html>
